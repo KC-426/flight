@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2 {
+        text-align: center;
+        color: #555;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      .details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .details div {
+        flex: 1 1 45%;
+        margin: 10px;
+        background: #fafafa;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .details div h2 {
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+      .user-info {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Flight Details</h1>
+      <div class="details">
+        <div>
+          <h2>Flight Number: <%= flight.flightNumber %></h2>
+          <h2>Origin: <%= flight.origin %></h2>
+          <h2>Destination: <%= flight.destination %></h2>
+          <h2>Departure Date: <%= flight.departureDate.toISOString() %></h2>
+          <h2>Arrival Date: <%= flight.arrivalDate.toISOString() %></h2>
+        </div>
+        <div>
+          <h2>Airline: <%= flight.airline %></h2>
+          <h2>Price: $<%= flight.price %></h2>
+          <h2>Available Seats: <%= flight.availableSeats %></h2>
+          <h2>Duration: <%= flight.duration %></h2>
+          <h2>Aircraft: <%= flight.aircraft %></h2>
+        </div>
+      </div>
+      <div class="user-info">
+        <h2>User: <%= user.name %></h2>
+        <h2>Email: <%= user.email %></h2>
+      </div>
+    </div>
+  </body>
+</html>
